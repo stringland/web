@@ -83,7 +83,10 @@ export class WordCount extends React.Component {
     render() {
       return (
         <div>
-          <div>
+          <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
+            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Words Count</h2>
+          </div>
+          <div style={{ marginTop: '2%'}}>
             <Form name="dynamic_form_item" {...this.formItemLayoutWithOutLabel} onFinish={this.handleOnFinish}> 
                 <Form.List name="words"
                     rules={[{

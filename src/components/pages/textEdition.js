@@ -57,7 +57,10 @@ export class TextEdition extends React.Component {
     render() {
       return (
         <div>
-          <div>
+          <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
+            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Simple Text Editor</h2>
+          </div>
+          <div style={{ marginTop: '2%'}}>
             <Select labelInValue defaultValue={{ value: '1' }} style={{ width: '25%' }} onChange={this.handleDropDown}>
                 <Option value="1">Upper Case</Option>
                 <Option value="2">Lower Case</Option>

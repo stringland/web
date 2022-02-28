@@ -71,7 +71,10 @@ export class StringEndecode extends React.Component {
     render() {
       return (
         <div>
-         <div>
+          <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
+            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>String Encode/Decode</h2>
+          </div>
+          <div style={{ marginTop: '2%'}}>
             <Select labelInValue defaultValue={{ value: '0' }} style={{ width: '25%' }} onChange={this.handleOpType}>
                 <Option value="0">Encode Only</Option>
                 <Option value="1">Decode Only</Option>
@@ -108,7 +111,7 @@ export class StringEndecode extends React.Component {
           <div style={{ marginTop: '2%' }}>
             <Button style={{ float:'right' }} type="primary" value="Submit" onClick={this.handleSubmit}>Submit</Button>
           </div>
-          <div style={{ marginTop: '2%', display: this.state.showRes ? "block" : "none" }}>
+          <div style={{ marginTop: '5%', display: this.state.showRes ? "block" : "none" }}>
             <TextArea showCount value={this.state.result} rows={10} readOnly />
           </div>
         </div>

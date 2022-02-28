@@ -30,7 +30,7 @@ export class TextOperations extends React.Component {
       return (
         <HashRouter>
             <Layout className="site-layout-background" style={{ padding: '2%', minHeight: '100vh' }}>
-                <Sider className="site-layout-background" style={{ minWidth:'10vh' }} trigger={null} collapsible collapsed={this.state.collapsed}>
+                <Sider className="site-layout-background" style={{ minWidth:'10vh', border: '1px solid rgb(235, 237, 240)' }} trigger={null} collapsible collapsed={this.state.collapsed}>
                   <Menu mode="inline" defaultSelectedKeys={['1']} style={{ height: '100%' }}>
                       <Menu.Item key="1" icon={<FileTextOutlined />}><NavLink to="/text_operations/edit_txt">Simple Text Edit</NavLink></Menu.Item>
                       <Menu.Item key="2" icon={<FileTextOutlined />}><NavLink to="/text_operations/word_count">Word Count</NavLink></Menu.Item>

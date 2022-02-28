@@ -70,7 +70,10 @@ export class TimeConversion extends React.Component {
     render() {
       return (
         <div>
-         <div>
+          <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
+            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Time Conversion</h2>
+          </div>
+          <div style={{ marginTop: '2%'}}>
             <Row style={{ width: '100%' }}>
               <Col span={1}>
               From:

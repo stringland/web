@@ -38,7 +38,7 @@ export class MisOperations extends React.Component {
       return (
         <HashRouter>
             <Layout className="site-layout-background" style={{ padding: '2%', minHeight: '100vh' }}>
-                <Sider className="site-layout-background" style={{ minWidth:'10vh' }} trigger={null} collapsible collapsed={this.state.collapsed}>
+                <Sider className="site-layout-background" style={{ minWidth:'10vh', border: '1px solid rgb(235, 237, 240)' }} trigger={null} collapsible collapsed={this.state.collapsed}>
                   <Menu mode="inline" style={{height: '100%' }}>
                       <SubMenu key="sub1" icon={<ClockCircleOutlined />} title="Time Operation">
                       <Menu.Item key="100"><NavLink to="/mis_operations/convert_timezone">Convert Timezone</NavLink></Menu.Item>

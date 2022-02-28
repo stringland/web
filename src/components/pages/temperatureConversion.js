@@ -70,7 +70,10 @@ export class TemperatureConversion extends React.Component {
     render() {
       return (
         <div>
-         <div>
+          <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
+            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Temperature Conversion</h2>
+          </div>
+          <div style={{ marginTop: '2%'}}>
             <Row>
               <Col xs={16} xl={1} xxl={1}>
               From:
@@ -78,7 +81,7 @@ export class TemperatureConversion extends React.Component {
               <Col xs={24} xl={10} xxl={10}>
                 <Input maxLength={305} value={this.state.originalValue} onChange={this.handleChange} />
               </Col>
-              <Col xs={24} xl={16} xxl={6}>
+              <Col xs={24} xl={16} xxl={4}>
                 <Select labelInValue defaultValue={{ value: '0' }} style={{ width: '40%' }} onChange={this.handleSrcType}>
                     <Option value="0">Celsius</Option>
                     <Option value="1">Fahrenheit</Option>
@@ -102,7 +105,7 @@ export class TemperatureConversion extends React.Component {
               <Col xs={24} xl={10} xxl={10}>
                 <Input maxLength={305} value={this.state.result} readOnly />
               </Col>
-              <Col xs={24} xl={16} xxl={6}>
+              <Col xs={24} xl={16} xxl={4}>
                 <Select labelInValue defaultValue={{ value: '0' }} style={{ width: '40%' }} onChange={this.handleDstType}>
                     <Option value="0">Celsius</Option>
                     <Option value="1">Fahrenheit</Option>

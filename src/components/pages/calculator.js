@@ -78,7 +78,10 @@ export class Calculator extends React.Component {
     render() {
       return (
         <div>
-          <div>
+          <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
+            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Logic Calculator</h2>
+          </div>
+          <div style={{ marginTop: '2%'}}>
             Source Base:
             <InputNumber
               defaultValue={2}

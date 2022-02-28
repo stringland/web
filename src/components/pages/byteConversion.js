@@ -70,7 +70,10 @@ export class ByteConversion extends React.Component {
     render() {
       return (
         <div>
-         <div>
+          <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
+            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Byte Conversion</h2>
+          </div>
+          <div style={{ marginTop: '2%'}}>
             <Row>
               <Col xs={16} xl={1} xxl={1}>
               From:

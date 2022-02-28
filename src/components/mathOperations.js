@@ -38,7 +38,7 @@ export class MathOperations extends React.Component {
       return (
         <HashRouter>
             <Layout className="site-layout-background" style={{ padding: '2%', minHeight: '100vh' }}>
-                <Sider className="site-layout-background" style={{ minWidth:'10vh' }} trigger={null} collapsible collapsed={this.state.collapsed}>
+                <Sider className="site-layout-background" style={{ minWidth:'10vh', border: '1px solid rgb(235, 237, 240)' }} trigger={null} collapsible collapsed={this.state.collapsed}>
                   <Menu mode="inline" defaultSelectedKeys={['100']} style={{ height: '100%' }}>
                       <Menu.Item key="100" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/math_base">Convert Math Base</NavLink></Menu.Item>
                       <Menu.Item key="101" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/convert_byte">Convert Byte/Bit</NavLink></Menu.Item>
@@ -49,7 +49,7 @@ export class MathOperations extends React.Component {
                       <Menu.Item key="106" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/convert_mass">Convert Mass</NavLink></Menu.Item>
                       <Menu.Item key="107" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/convert_area">Convert Area</NavLink></Menu.Item>
                       <Menu.Item key="108" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/convert_volume">Convert Volume</NavLink></Menu.Item>
-                      <Menu.Item key="109" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/calculator">Calculator</NavLink></Menu.Item>
+                      <Menu.Item key="109" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/calculator">Logic Calculator</NavLink></Menu.Item>
                   </Menu>
                 </Sider>
                 <Layout className="site-layout">

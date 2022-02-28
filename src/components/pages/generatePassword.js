@@ -80,7 +80,10 @@ export class PasswordGenerator extends React.Component {
     render() {
       return (
         <div>
-          <div style={{ marginTop: '2%' }}>
+          <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
+            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Password Generation</h2>
+          </div>
+          <div style={{ marginTop: '2%'}}>
             <Text style={{textAlign: "left", fontSize: "medium"}}>
               Note: The generated password will not be saved anywhere in StringLand. Please remember to save it by yourself.
             </Text>
