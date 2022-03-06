@@ -2,8 +2,10 @@ import {v4 as uuidv4} from 'uuid';
 import React from 'react';
 import 'antd/dist/antd.css';
 import axios from 'axios'
-import { Select, Row, Col, Input, Button, Divider, message } from 'antd';
+import { Typography, Select, Row, Col, Input, Button, Divider, message } from 'antd';
 const { Option } = Select;
+const { Title, Paragraph } = Typography;
+
 
 export class VolumeConversion extends React.Component {
     constructor(props) {
@@ -71,7 +73,10 @@ export class VolumeConversion extends React.Component {
       return (
         <div>
           <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
-            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Volume Conversion</h2>
+            <Title style={{textAlign: "center", fontSize:'3vh'}} >Volume Conversion</Title>
+            <Paragraph style={{textAlign: "center", fontSize: "large"}}>
+              Convert volume unit among cubic meter, litre, gallon and etc.
+            </Paragraph>
           </div>
           <div style={{ marginTop: '2%'}}>
             <Row>

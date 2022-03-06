@@ -7,7 +7,7 @@ import Home from './components/home';
 import TextOperations from './components/textOperations';
 import MathOperations from './components/mathOperations';
 import MisOperations from './components/misOperations';
-import Games from './components/games';
+import GuessNumGames from './components/guess_num_games';
 import AboutUs from './components/aboutus'
 import {FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon} from "react-share";
 
@@ -24,11 +24,7 @@ function App() {
           </div>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
             <Menu.Item key="1"><NavLink to="/">Home</NavLink></Menu.Item>
-            <Menu.Item key="2"><NavLink to="/text_operations">Text</NavLink></Menu.Item>
-            <Menu.Item key="3"><NavLink to="/math_operations">Math</NavLink></Menu.Item>
-            <Menu.Item key="4"><NavLink to="/mis_operations">Mis</NavLink></Menu.Item>
-            <Menu.Item key="5"><NavLink to="/games">Games</NavLink></Menu.Item>
-            <Menu.Item key="6"><NavLink to="/aboutus">About</NavLink></Menu.Item>
+            <Menu.Item key="2"><NavLink to="/aboutus">About</NavLink></Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '0 3%', backgroundColor: 'white' }}>
@@ -36,7 +32,7 @@ function App() {
           <Route path="/text_operations" component={TextOperations}/>
           <Route path="/math_operations" component={MathOperations}/>
           <Route path="/mis_operations" component={MisOperations}/>
-          <Route path="/games" component={Games}/>
+          <Route path="/games" component={GuessNumGames}/>
           <Route path="/aboutus" component={AboutUs}/>
         </Content>
         <Footer style={{ width: '100%', textAlign: 'center', backgroundColor: '#645F5F' }}>

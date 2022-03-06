@@ -16,9 +16,12 @@ export class Home extends React.Component {
       return (
         <div style={{ marginTop:"2%"}}>
           <section>
-            <Title style={{textAlign: "center"}} >Welcome to StringLand</Title>
+            <Title style={{textAlign: "center"}} >Welcome to StringLand Tech</Title>
             <Paragraph style={{textAlign: "center", fontSize: "x-large"}}>
-              StringLand is a collection of various kinds of string operations website.
+              StringLand Tech has various kinds of useful office/study tools, and fun games.
+            </Paragraph>
+            <Paragraph style={{textAlign: "center", fontSize: "x-large"}}>
+              Learn more about StringLand Tech from <a href="https://stringlandtech.blogspot.com" target="_blank" rel="noreferrer">Blog</a>
             </Paragraph>
             <Paragraph style={{textAlign: "center", fontSize: "x-large"}}>
               Let us click the key features cards below and start the jouney!

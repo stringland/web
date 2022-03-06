@@ -4,9 +4,10 @@ import moment from 'moment';
 import momenttz from 'moment-timezone';
 import 'antd/dist/antd.css';
 import axios from 'axios'
-import { Select, Input, Button, DatePicker, Space, InputNumber, message } from 'antd';
+import { Typography, Select, Input, Button, DatePicker, Space, InputNumber, message } from 'antd';
 const { Option } = Select;
 const { TextArea } = Input;
+const { Title, Paragraph } = Typography;
 
 export class TimezoneConversion extends React.Component {
     constructor(props) {
@@ -153,7 +154,10 @@ export class TimezoneConversion extends React.Component {
       return (
         <div>
           <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
-            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Timezone Conversion</h2>
+            <Title style={{textAlign: "center", fontSize:'3vh'}} >Timezone Conversion</Title>
+            <Paragraph style={{textAlign: "center", fontSize: "large"}}>
+              Convert time between timestamp and date with different timezones.
+            </Paragraph>
           </div>
           <div style={{ marginTop: '2%'}}>
             Current Timestamp: {this.state.currentTimeStamp}

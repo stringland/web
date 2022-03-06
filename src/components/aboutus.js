@@ -25,6 +25,11 @@ export class AboutUs extends React.Component {
             <br />
             <br />
             <Text style={{textAlign: "left", fontSize: "large"}}>
+              To learn more about StringLand Tech, you can visit this <a href="https://stringlandtech.blogspot.com" target="_blank" rel="noreferrer">blog</a> .
+            </Text>
+            <br />
+            <br />
+            <Text style={{textAlign: "left", fontSize: "large"}}>
               If you find any issues, or have any requirements, feel free to email stringlangstr@gmail.com . Thanks.
             </Text>
             <br />

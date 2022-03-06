@@ -2,10 +2,11 @@ import {v4 as uuidv4} from 'uuid';
 import React from 'react';
 import 'antd/dist/antd.css';
 import axios from 'axios'
-import { Input, Button, Form, message  } from 'antd';
+import { Typography, Input, Button, Form, message  } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import Highlighter from "react-highlight-words";
 const { TextArea } = Input;
+const { Title, Paragraph } = Typography;
 
 export class WordCount extends React.Component {  
     constructor(props) {
@@ -84,7 +85,10 @@ export class WordCount extends React.Component {
       return (
         <div>
           <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
-            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Words Count</h2>
+            <Title style={{textAlign: "center", fontSize:'3vh'}} >Words Count</Title>
+            <Paragraph style={{textAlign: "center", fontSize: "large"}}>
+              Show multiple words' count of given text. 
+            </Paragraph>
           </div>
           <div style={{ marginTop: '2%'}}>
             <Form name="dynamic_form_item" {...this.formItemLayoutWithOutLabel} onFinish={this.handleOnFinish}> 

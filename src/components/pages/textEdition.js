@@ -2,7 +2,8 @@ import {v4 as uuidv4} from 'uuid';
 import React from 'react';
 import 'antd/dist/antd.css';
 import axios from 'axios'
-import { Select, Input, Button, message } from 'antd';
+import { Typography,Select, Input, Button, message } from 'antd';
+const { Title, Paragraph } = Typography;
 const { Option } = Select;
 const { TextArea } = Input;
 
@@ -58,7 +59,10 @@ export class TextEdition extends React.Component {
       return (
         <div>
           <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
-            <h2 style={{ textAlign:'center', fontSize:'3vh' }}>Simple Text Editor</h2>
+            <Title style={{textAlign: "center", fontSize:'3vh'}} >Simple Text Editor</Title>
+            <Paragraph style={{textAlign: "center", fontSize: "large"}}>
+              Simple text editor can convert alphabetical cases, tabs and spaces, and reverse characters/lines. 
+            </Paragraph>
           </div>
           <div style={{ marginTop: '2%'}}>
             <Select labelInValue defaultValue={{ value: '1' }} style={{ width: '25%' }} onChange={this.handleDropDown}>

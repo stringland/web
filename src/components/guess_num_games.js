@@ -6,7 +6,7 @@ import axios from 'axios'
 import { message } from 'antd';
 import { Input,Button,MessageList } from 'react-chat-elements'
 
-export class Games extends React.Component {
+export class GuessNumGames extends React.Component {
     chatContainer = React.createRef();
 
     constructor(props) {
@@ -172,4 +172,4 @@ export class Games extends React.Component {
     }
 }
 
-export default Games;
+export default GuessNumGames;
