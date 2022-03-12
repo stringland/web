@@ -32,7 +32,7 @@ function App() {
           <Route path="/text_operations" component={TextOperations}/>
           <Route path="/math_operations" component={MathOperations}/>
           <Route path="/mis_operations" component={MisOperations}/>
-          <Route path="/games" component={GuessNumGames}/>
+          <Route path="/guess_number_game" component={GuessNumGames}/>
           <Route path="/aboutus" component={AboutUs}/>
         </Content>
         <Footer style={{ width: '100%', textAlign: 'center', backgroundColor: '#645F5F' }}>

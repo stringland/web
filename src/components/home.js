@@ -36,7 +36,7 @@ export class Home extends React.Component {
                 <Col xs={16} xl={8} xxl={4}>
                   <a href="https://stringland.github.io/web/#/text_operations/edit_txt" >
                   <Card hoverable
-                      cover={<img alt="example" src="https://www.linkpicture.com/q/stringland-textop.svg"/>}
+                      cover={<img alt="stringland tech simple text editor" src="https://www.linkpicture.com/q/stringland-textop.svg"/>}
                     >
                       <Meta title="Text Opertion" description="Basic text operations like word counts" />
                   </Card>
@@ -45,7 +45,7 @@ export class Home extends React.Component {
                 <Col xs={16} xl={8} xxl={4}>
                   <a href="https://stringland.github.io/web/#/math_operations/math_base" >
                   <Card hoverable
-                      cover={<img alt="example" src="https://www.linkpicture.com/q/stringland-math.svg" />}
+                      cover={<img alt="stringland tech calculator" src="https://www.linkpicture.com/q/stringland-math.svg" />}
                     >
                       <Meta title="Math Opertion" description="Math base/unit conversion and logic calculator" />
                   </Card>
@@ -54,7 +54,7 @@ export class Home extends React.Component {
                 <Col xs={16} xl={8} xxl={4}>
                   <a href="https://stringland.github.io/web/#/mis_operations/convert_timezone" >
                   <Card hoverable 
-                      cover={<img alt="example" src="https://www.linkpicture.com/q/stringland-clock.svg" />}
+                      cover={<img alt="stringland tech time conversion" src="https://www.linkpicture.com/q/stringland-clock.svg" />}
                     >
                       <Meta title="Time Operation" description="time stamp/date/unit conversion" />
                   </Card>
@@ -63,7 +63,7 @@ export class Home extends React.Component {
                 <Col xs={16} xl={8} xxl={4}>
                   <a href="https://stringland.github.io/web/#/mis_operations/base_string" >
                   <Card hoverable 
-                      cover={<img alt="example" src="https://www.linkpicture.com/q/stringland-strop_1.svg" />}
+                      cover={<img alt="stringland tech string conversion/coding" src="https://www.linkpicture.com/q/stringland-strop_1.svg" />}
                     >
                       <Meta title="String Operation" description="string encode/decode, pasword generation and etc" />
                   </Card>
@@ -72,18 +72,25 @@ export class Home extends React.Component {
                 <Col xs={16} xl={8} xxl={4}>
                   <a href="https://stringland.github.io/web/#/mis_operations/convert_color" >
                   <Card hoverable 
-                      cover={<img alt="example" src="https://www.linkpicture.com/q/stringland-color.svg" />}
+                      cover={<img alt="stringland tech color code conversion" src="https://www.linkpicture.com/q/stringland-color.svg" />}
                     >
                       <Meta title="Color Operation" description="Conversion between different color codes, like RGB, HSV, CMYK and etc" />
                   </Card>
                   </a>
                 </Col>
               </Row>
+            </div>
+          </section>
+          <br />
+          <Divider orientation="left"></Divider>
+          <section>
+            <Tag color="black">games</Tag>
+            <div className="site-card-wrapper" style={{ marginTop:"1%"}}>
               <Row gutter={10}>
                 <Col xs={16} xl={8} xxl={4}>
-                  <a href="https://stringland.github.io/web/#/games" >
+                  <a href="https://stringland.github.io/web/#/guess_number_game" >
                   <Card hoverable 
-                      cover={<img alt="example" src="https://www.linkpicture.com/q/stringland-guessnum_2.svg" />}
+                      cover={<img alt="stringland tech guess number game" src="https://www.linkpicture.com/q/stringland-guessnum_2.svg" />}
                     >
                       <Meta title="Guess Number Game" description="Classic Bulls and Cows Game" />
                   </Card>

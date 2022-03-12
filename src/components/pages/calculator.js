@@ -82,7 +82,10 @@ export class Calculator extends React.Component {
           <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
             <Title style={{textAlign: "center", fontSize:'3vh'}} >Logic Calculator</Title>
             <Paragraph style={{textAlign: "center", fontSize: "large"}}>
-              Calculate multiple numbers' logic operation result. Operations include OR, AND, XOR, XNOR, NAND, NOT and etc.
+              Calculate multiple non negative numbers' logic operation result. Operations include OR, AND, XOR, XNOR, NAND, NOT and etc.
+            </Paragraph>
+            <Paragraph style={{textAlign: "center", fontSize: "large"}}>
+              Base is between 2 and 62. A ~ Z represents 10 ~ 35. a ~ z represents 36 ~ 61.
             </Paragraph>
           </div>
           <div style={{ marginTop: '2%'}}>
