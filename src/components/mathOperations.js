@@ -14,6 +14,7 @@ import LengthConversion from './pages/lengthConversion'
 import MassConversion from './pages/massConversion'
 import AreaConversion from './pages/areaConversion'
 import VolumeConversion from './pages/volumeConversion'
+import AngleConversion from './pages/angleConversion'
 import Calculator from './pages/calculator'
 
 const { Header,Content, Sider } = Layout;
@@ -49,7 +50,8 @@ export class MathOperations extends React.Component {
                       <Menu.Item key="106" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/convert_mass">Convert Mass</NavLink></Menu.Item>
                       <Menu.Item key="107" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/convert_area">Convert Area</NavLink></Menu.Item>
                       <Menu.Item key="108" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/convert_volume">Convert Volume</NavLink></Menu.Item>
-                      <Menu.Item key="109" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/calculator">Logic Calculator</NavLink></Menu.Item>
+                      <Menu.Item key="109" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/convert_angle">Convert Angle</NavLink></Menu.Item>
+                      <Menu.Item key="110" icon={<FieldBinaryOutlined/>}><NavLink to="/math_operations/calculator">Logic Calculator</NavLink></Menu.Item>
                   </Menu>
                 </Sider>
                 <Layout className="site-layout">
@@ -69,6 +71,7 @@ export class MathOperations extends React.Component {
                       <Route path="/math_operations/convert_mass" component={MassConversion}/>
                       <Route path="/math_operations/convert_area" component={AreaConversion}/>
                       <Route path="/math_operations/convert_volume" component={VolumeConversion}/>
+                      <Route path="/math_operations/convert_angle" component={AngleConversion}/>
                       <Route path="/math_operations/calculator" component={Calculator}/>
                   </Content>
                 </Layout>
