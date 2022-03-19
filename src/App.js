@@ -6,8 +6,9 @@ import { Layout, Menu } from 'antd';
 import Home from './components/home';
 import TextOperations from './components/textOperations';
 import MathOperations from './components/mathOperations';
+import Security from './components/security';
 import MisOperations from './components/misOperations';
-import GuessNumGames from './components/guess_num_games';
+import GuessNumGames from './components/guessNumGames';
 import AboutUs from './components/aboutus'
 import {FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon} from "react-share";
 
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route path="/text_operations" component={TextOperations}/>
           <Route path="/math_operations" component={MathOperations}/>
+          <Route path="/security" component={Security}/>
           <Route path="/mis_operations" component={MisOperations}/>
           <Route path="/guess_number_game" component={GuessNumGames}/>
           <Route path="/aboutus" component={AboutUs}/>

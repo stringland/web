@@ -15,7 +15,8 @@ export class WordCount extends React.Component {
         originalText: 'this article has many words. let us do the word count.',
         result: 'convert string case',
         words: ['word', 'count'],
-        type: 0,
+        opType: 1,
+        patternType: 1,
         showRes: false,
         disableSubmit: true
       };
@@ -44,30 +45,31 @@ export class WordCount extends React.Component {
         console.log('Received values of form:', values);
 
         const sessionId = uuidv4();
-        const reqId = "wd-cnt-"+sessionId;
+        const reqId = "txt-srh-"+sessionId;
         const data = {
             sessionID: sessionId, 
             requestID: reqId,
             userID: 'default_user',
             text: values.article,
-            words: values.words,
-            type: this.state.type
+            patterns: values.words,
+            opType: this.state.opType,
+            patternType: this.state.patternType
         };
 
-        axios.post('https://nifty-gasket-338410.wl.r.appspot.com/word_count', data, {
+        axios.post('https://nifty-gasket-338410.wl.r.appspot.com/text_search', data, {
             'Content-Type': 'application/json'
         }).then(
             response => {
                 this.setState({ result: response.data.errMsg, showRes: true })
 
                 var wdCnt = ""
-                Object.keys(response.data.wordCount).forEach(function(key) {
-                    wdCnt = wdCnt + key + ": " + response.data.wordCount[key] + "\n" 
+                Object.keys(response.data.patternCount).forEach(function(key) {
+                    wdCnt = wdCnt + key + ": " + response.data.patternCount[key] + "\n" 
                 });
 
                 this.setState({
                     originalText: data.text,
-                    words: data.words,
+                    words: data.patterns,
                     result: wdCnt
                 })
             }
@@ -129,7 +131,7 @@ export class WordCount extends React.Component {
                         ))}
                         <Form.Item {...this.formItemLayout}>
                             <Button type="dashed" onClick={() => add()} style={{ width: '20%' }} icon={<PlusOutlined />}>
-                                Add New Word/Phrase
+                                Add New Word(s)
                             </Button>
                             <Form.ErrorList errors={errors} />
                         </Form.Item>

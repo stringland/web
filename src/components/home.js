@@ -70,6 +70,15 @@ export class Home extends React.Component {
                   </a>
                 </Col>
                 <Col xs={16} xl={8} xxl={4}>
+                  <a href="https://stringland.github.io/web/#/security/generate_checksum" >
+                  <Card hoverable 
+                      cover={<img alt="stringland tech security operation" src="https://www.linkpicture.com/q/stringland-security-v2.svg" />}
+                    >
+                      <Meta title="Security Operation" description="checksum and password generation" />
+                  </Card>
+                  </a>
+                </Col>
+                <Col xs={16} xl={8} xxl={4}>
                   <a href="https://stringland.github.io/web/#/mis_operations/convert_color" >
                   <Card hoverable 
                       cover={<img alt="stringland tech color code conversion" src="https://www.linkpicture.com/q/stringland-color.svg" />}

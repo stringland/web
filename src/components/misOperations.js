@@ -9,7 +9,6 @@ import BaseString from './pages/baseString';
 import HTMLString from './pages/htmlString';
 import URLString from './pages/urlString';
 import IPConversion from './pages/ipConversion';
-import PasswordGenerator from './pages/generatePassword';
 import StringEndecode from './pages/stringEnDecode';
 import TimezoneConversion from './pages/timezoneConversion';
 import ColorConversion from './pages/colorConversion';
@@ -69,7 +68,6 @@ export class MisOperations extends React.Component {
                       <Route path="/mis_operations/html_string" component={HTMLString}/>
                       <Route path="/mis_operations/url_string" component={URLString}/>
                       <Route path="/mis_operations/convert_ip" component={IPConversion}/>
-                      <Route path="/mis_operations/generate_password" component={PasswordGenerator}/>
                       <Route path="/mis_operations/string_encodedecode" component={StringEndecode}/>
                       <Route path="/mis_operations/convert_timezone" component={TimezoneConversion}/>
                       <Route path="/mis_operations/convert_time" component={TimeConversion}/>
