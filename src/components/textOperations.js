@@ -6,7 +6,7 @@ import { Route, NavLink, HashRouter } from "react-router-dom";
 import { Layout, Menu } from 'antd';
 import { FileTextOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
 import TextEdition from './pages/textEdition';
-import WordCount from './pages/wordCount';
+import TextSearch from './pages/textSearch';
 
 const { Header,Content, Sider } = Layout;
 
@@ -33,7 +33,7 @@ export class TextOperations extends React.Component {
                 <Sider className="site-layout-background" style={{ minWidth:'10vh', border: '1px solid rgb(235, 237, 240)' }} trigger={null} collapsible collapsed={this.state.collapsed}>
                   <Menu mode="inline" defaultSelectedKeys={['1']} style={{ height: '100%' }}>
                       <Menu.Item key="1" icon={<FileTextOutlined />}><NavLink to="/text_operations/edit_txt">Simple Text Edit</NavLink></Menu.Item>
-                      <Menu.Item key="2" icon={<FileTextOutlined />}><NavLink to="/text_operations/word_count">Word Count</NavLink></Menu.Item>
+                      <Menu.Item key="2" icon={<FileTextOutlined />}><NavLink to="/text_operations/txt_search">Text Search/Replacement</NavLink></Menu.Item>
                   </Menu>
                 </Sider>
                 <Layout className="site-layout">
@@ -45,7 +45,7 @@ export class TextOperations extends React.Component {
                   </Header>
                   <Content style={{ padding: '0 2%', marginTop:'1%', minHeight: '70%' }}>
                       <Route path="/text_operations/edit_txt" component={TextEdition}/>
-                      <Route path="/text_operations/word_count" component={WordCount}/>
+                      <Route path="/text_operations/txt_search" component={TextSearch}/>
                   </Content>
                 </Layout>
             </Layout>

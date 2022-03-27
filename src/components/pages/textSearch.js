@@ -9,7 +9,7 @@ const { Option } = Select;
 const { TextArea } = Input;
 const { Title, Paragraph } = Typography;
 
-export class WordCount extends React.Component {  
+export class TextSearch extends React.Component {  
     constructor(props) {
       super(props);
       this.state = {
@@ -145,7 +145,7 @@ export class WordCount extends React.Component {
                 var txt = data.text
                 if(this.state.opType === 2){
                   txt = response.data.str
-                  wdCnt = "deleted words count: "
+                  wdCnt = "deleted words count: \n"
                 }
 
                 if(response.data.hasOwnProperty('patternCount')) {
@@ -179,7 +179,10 @@ export class WordCount extends React.Component {
           <div style={{ border: '1px solid rgb(235, 237, 240)' }}>
             <Title style={{textAlign: "center", fontSize:'3vh'}} >Text Search and Replacement</Title>
             <Paragraph style={{textAlign: "center", fontSize: "large"}}>
-              Show multiple words' count of given text. Or replace word(s) with regular expression or other word.
+              Show multiple words' count of given text by providing multiple target words or one regular expression. 
+            </Paragraph>
+            <Paragraph style={{textAlign: "center", fontSize: "large"}}>
+              Or replace word(s) with regular expression or other word.
             </Paragraph>
           </div>
           <div style={{ marginTop: '2%'}}>
@@ -248,10 +251,10 @@ export class WordCount extends React.Component {
           <div style={{ marginTop: '2%', display: this.state.opType === 2 ? "block" : "none"}}>
             <Row gutter={10}>
               <Col xs={16} xl={8} xxl={4}>
-                <Input maxLength={110} value={this.state.srcPattern} onChange={this.handleSrcPatternChange} />
+                source word/regular expression<Input maxLength={110} value={this.state.srcPattern} onChange={this.handleSrcPatternChange} />
               </Col>
               <Col xs={16} xl={8} xxl={4}>
-                <Input maxLength={110} value={this.state.replacePattern} onChange={this.handleReplacePatternChange} />
+                replace word<Input maxLength={110} value={this.state.replacePattern} onChange={this.handleReplacePatternChange} />
               </Col>
             </Row>
           </div>
@@ -274,4 +277,4 @@ export class WordCount extends React.Component {
     }
 }
 
-export default WordCount;
+export default TextSearch;
