@@ -6,9 +6,7 @@ const {Text } = Typography;
 export class AboutUs extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {
-        showRes: false
-      };  
+      this.state = {};  
     }
     
     render() {
