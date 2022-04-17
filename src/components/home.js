@@ -37,7 +37,7 @@ export class Home extends React.Component {
                   <Card hoverable
                       cover={<img alt="stringland tech simple text editor" src="https://www.linkpicture.com/q/stringland-textop.svg"/>}
                     >
-                      <Meta title="Text Opertion" description="Basic text operations like word counts" />
+                      <Meta title="Text Editor" description="Support text search, replace and conversion" />
                   </Card>
                   </a>
                 </Col>
