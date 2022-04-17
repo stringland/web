@@ -1,0 +1,12 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.logo {
+    float: left;
+    width: 5%;
+    height: 50%;
+    margin: 16px 24px 16px 0;
+    background: #fff;
+}
