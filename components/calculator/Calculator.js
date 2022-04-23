@@ -15,11 +15,13 @@ export class Calculator extends React.Component {
         result: '',
         opType: 1,
         base: 2,
+        extVal: 0,
         showRes: false
       };
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSrcBase = this.handleBase.bind(this);
+      this.handleExtVal = this.handleExtVal.bind(this);
       this.handleDropDown = this.handleDropDown.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -30,6 +32,10 @@ export class Calculator extends React.Component {
   
     handleBase(value) {
       this.setState({base: value});
+    }
+
+    handleExtVal(value) {
+      this.setState({extVal: value})
     }
 
     handleDropDown(event) {
@@ -57,7 +63,8 @@ export class Calculator extends React.Component {
         userID: 'default_user',
         base: this.state.base,
         vals: vals,
-        opType: this.state.opType
+        opType: this.state.opType,
+        extVal: this.state.extVal
       };
 
       console.log(data)
@@ -107,9 +114,15 @@ export class Calculator extends React.Component {
                 <Option value="5">NOR</Option>
                 <Option value="6">NAND</Option>
                 <Option value="7">XNOR</Option>
+                <Option value="8">Left Shift</Option>
+                <Option value="9">Right Shift</Option>
             </Select>
           </div>
           <Divider />
+          <div style={{ marginTop: '6%', display: this.state.extVal > 7 && this.state.extVal < 10 ? "block" : "none" }}>
+            <InputNumber defaultValue={10} min={0} max={2000} onChange={this.handleExtVal} />
+          </div>
+          <Divider style={{ marginTop: '6%', display: this.state.extVal > 7 && this.state.extVal < 10 ? "block" : "none" }}/>
           Except NOT operation, multiple numbers are required and they are separated in each line.
           <div style={{ marginTop: '2%' }}>
             <TextArea showCount maxLength={3000000} rows={10} value={this.state.originalValue} onChange={this.handleChange} />
