@@ -15,7 +15,7 @@ export class Calculator extends React.Component {
         result: '',
         opType: 1,
         base: 2,
-        extVal: 0,
+        extVal: 2,
         showRes: false
       };
   
@@ -67,9 +67,7 @@ export class Calculator extends React.Component {
         extVal: this.state.extVal
       };
 
-      console.log(data)
-
-      axios.post('https://nifty-gasket-338410.wl.r.appspot.com/calculator', data, {
+      axios.post('http://localhost:8080/calculator', data, {
         'Content-Type': 'application/json'
       }).then(
         response => this.setState({ result: response.data.str, showRes: true })
@@ -106,7 +104,7 @@ export class Calculator extends React.Component {
           </div>
           <Divider />
           <div>
-            <Select labelInValue defaultValue={{ value: '7' }} style={{ width: '25%' }} onChange={this.handleDropDown}>
+            <Select labelInValue defaultValue={{ value: '1' }} style={{ width: '25%' }} onChange={this.handleDropDown}>
                 <Option value="1">OR</Option>
                 <Option value="2">AND</Option>
                 <Option value="3">XOR</Option>
@@ -119,11 +117,11 @@ export class Calculator extends React.Component {
             </Select>
           </div>
           <Divider />
-          <div style={{ marginTop: '6%', display: this.state.extVal > 7 && this.state.extVal < 10 ? "block" : "none" }}>
-            <InputNumber defaultValue={10} min={0} max={2000} onChange={this.handleExtVal} />
+          <div style={{ marginTop: '2%', display: this.state.opType > 7 && this.state.opType < 10 ? "block" : "none" }}>
+            <InputNumber defaultValue={2} min={0} max={2000} onChange={this.handleExtVal} />
           </div>
-          <Divider style={{ marginTop: '6%', display: this.state.extVal > 7 && this.state.extVal < 10 ? "block" : "none" }}/>
-          Except NOT operation, multiple numbers are required and they are separated in each line.
+          <Divider style={{display: this.state.opType > 7 && this.state.opType < 10 ? "block" : "none" }}/>
+          Except NOT, Left Shift, Right Shift operation, multiple numbers are required and they are separated in each line.
           <div style={{ marginTop: '2%' }}>
             <TextArea showCount maxLength={3000000} rows={10} value={this.state.originalValue} onChange={this.handleChange} />
           </div>
