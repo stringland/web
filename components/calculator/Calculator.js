@@ -67,7 +67,7 @@ export class Calculator extends React.Component {
         extVal: this.state.extVal
       };
 
-      axios.post('http://localhost:8080/calculator', data, {
+      axios.post('https://nifty-gasket-338410.wl.r.appspot.com/calculator', data, {
         'Content-Type': 'application/json'
       }).then(
         response => this.setState({ result: response.data.str, showRes: true })
