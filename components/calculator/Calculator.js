@@ -89,6 +89,9 @@ export class Calculator extends React.Component {
             <Paragraph style={{textAlign: "center", fontSize: "large"}}>
               Calculate multiple non negative numbers' logic operation result. Operations include OR, AND, XOR, XNOR, NAND, NOT and etc.
             </Paragraph>
+            <Paragraph>
+              Except NOT, Left/Right Shift operation, other operation requires multiple numbers and they should be separated in each line.
+            </Paragraph>
             <Paragraph style={{textAlign: "center", fontSize: "large"}}>
               Base is between 2 and 62. A ~ Z represents 10 ~ 35. a ~ z represents 36 ~ 61.
             </Paragraph>
@@ -121,7 +124,6 @@ export class Calculator extends React.Component {
             <InputNumber defaultValue={2} min={0} max={2000} onChange={this.handleExtVal} />
           </div>
           <Divider style={{display: this.state.opType > 7 && this.state.opType < 10 ? "block" : "none" }}/>
-          Except NOT, Left Shift, Right Shift operation, multiple numbers are required and they are separated in each line.
           <div style={{ marginTop: '2%' }}>
             <TextArea showCount maxLength={3000000} rows={10} value={this.state.originalValue} onChange={this.handleChange} />
           </div>
